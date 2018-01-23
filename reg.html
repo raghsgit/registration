@@ -26,7 +26,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 
 
-			college name: &nbsp;<input  id="college2" placeholder="College Name" name="location" type="text"   style="display:none"  />
+			<label for="college2">college name: </label>&nbsp;<input  id="college2" placeholder="College Name" name="location" type="text"   style="display:none"  />
 
 			<select id = "myList2" style="display:none" name="events" >
 				<option value="" disabled="disabled" selected="selected">Select the Events</option>
@@ -77,12 +77,14 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 			$("#myList").change(function(){
 				if($("#myList").val()=="non_IET"){
+				$("label[for='college2']").css({"display":"block"});
 				$("#college2").css({"display":"block"});
 				$("#myList3").css({"display":"block"});
 				$("#myList2").css({"display":"block"});
 				$("#accomodation").css({"display":"block"});
 
 		}else if($("#myList").val()=="IET_Lucknow"){
+				$("label[for='college2']").css({"display":"none"});
 				$("#college2").css({"display":"none"});
 				$("#myList2").css({"display":"block"});
 				$("#myList3").css({"display":"none"});
