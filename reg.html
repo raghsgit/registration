@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Registration</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+</head>
+<body>
+
+
+	<div class="sub-main-w3">	
+		<form action=""  method="post" onsubmit="validateForm()"  >
+
+
+
+			<select id = "myList" name="opt1">
+				<option value="" disabled="disabled" selected="selected">Please select your college</option>
+				<option value = "IET_Lucknow"   onclick="xfunc()" class="iet">IET Lucknow</option>
+				<option value = "non_IET"  onclick="xfunc()" class="net">Others</option>
+
+			</select>
+
+
+
+			<input  id="college2" placeholder="College Name" name="location" type="text"   style="display:none"  />
+
+			<select id = "myList2" style="display:none" name="events" >
+				<option value="" disabled="disabled" selected="selected">Select the Events</option>
+				<option value = "badminton" >Badminton</option>
+				<option value = "tabletennis" >Table Tennis</option>
+				<option value = "football" >Football</option>
+				<option value = "cricket" >Cricket</option>
+				<option value = "volleyball" >Volleyball</option>
+				<option value = "carrom" >Carrom</option>
+				<option value = "chess" >Chess</option>
+				<option value = "khokho" >Kho-Kho</option>
+				<option value = "kabaddi" >Kabaddi</option>
+				<option value = "lawntennis" >Lawn Tennis</option>
+				<option value = "athletics" >Athletics</option>
+				<option value = "basketball" >Basketball</option>
+				<option value = "handball" >Handball</option>
+				<option value = "throwball" >Throwball</option>
+				<option value = "taekwondo" >Taekwondo</option>
+
+			</select>
+			<select id = "myList3" style="display:none" name="events" >
+				<option value="" disabled="disabled" selected="selected">Select the Events</option>
+				<option value = "tabletennis" >Table Tennis</option>
+				<option value = "football" >Football</option>
+				<option value = "cricket" >Cricket</option>
+				<option value = "volleyball" >Volleyball</option>
+				<option value = "chess" >Chess</option>
+				<option value = "khokho" >Kho-Kho</option>
+				<option value = "kabaddi" >Kabaddi</option>
+				<option value = "athletics" >Athletics</option>
+			</select>
+
+			<table>
+				<tr>
+					<td id="accreq" style="display:none ; color:black; font-size:1.1em;font-weight: 400;">Accomodation Required</td>
+					<td ><input type="checkbox"  name="accm"  id="accomodation" style="display:none;height:20px;width:30px" onclick="func2()"></td> 
+				</tr>
+			</table>
+
+			<br>
+
+			<input type="submit"  value="Submit" name="submit">
+		</form>
+	</div>
+
+	<script type="text/javascript">
+		function xfunc(){
+			var x=document.getElementById("myList").value;
+			if(x=="non_IET"){
+				document.getElementById("college2").style.display='block';
+				document.getElementById("myList3").style.display='block';
+				document.getElementById("myList2").style.display='none';
+				document.getElementById("accreq").style.display='block';
+				document.getElementById("accomodation").style.display='block';
+			}
+			if(x=="IET_Lucknow"){
+				document.getElementById("college2").style.display='none';
+				document.getElementById("myList2").style.display='block';
+				document.getElementById("myList3").style.display='none';
+				document.getElementById("accreq").style.display='none';
+				document.getElementById("accomodation").style.display='none';
+				document.getElementById("accreq").style.display='none';
+				document.getElementById("transaction").style.display='none';
+				document.getElementById("transaction2").style.display='none';
+			}
+		}
+</script>
+</body>
+</html>
